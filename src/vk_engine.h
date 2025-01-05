@@ -6,6 +6,7 @@
 #include <vk_types.h>
 #include <vk_initializers.h>
 #include "VkBootstrap.h"
+#include <vk_descriptors.h>
 
 struct DeletionQueue
 {
@@ -74,7 +75,15 @@ public:
 	std::vector<VkImageView> _swapchainImageViews;
 	VkExtent2D _swapchainExtent;
 
+	DescriptorAllocator globalDescriptorAllocator;
+
+	VkDescriptorSet _drawImageDescriptors;
+	VkDescriptorSetLayout _drawImageDescriptorLayout;
+
 	DeletionQueue _mainDeletionQueue;
+
+	VkPipeline _gradientPipeline;
+	VkPipelineLayout _gradientPipelineLayout;
 
 	//initializes everything in the engine
 	void init();
@@ -98,4 +107,9 @@ private:
 
 	void create_swapchain(uint32_t width, uint32_t height);
 	void destroy_swapchain();
+
+	void init_descriptors();
+
+	void init_pipelines();
+	void init_background_pipelines();
 };
