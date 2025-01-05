@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_initializers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_images.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_descriptors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_pipelines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_initializers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_descriptors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_pipelines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\MinSizeRel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\RelWithDebInfo\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{73A51A5E-058A-38C5-924C-B0F5E830AD5F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{259CC479-4D5C-3264-85FC-AC25949FF310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7B144AF4-8EF8-30BB-BF30-DAC53604F191}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

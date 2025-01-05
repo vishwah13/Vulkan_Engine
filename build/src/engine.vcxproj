@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{81E14CD6-A3B4-3C62-9B0A-7615C3735063}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>engine</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">engine.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">engine.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">engine.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">engine.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">engine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-debug\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/VulkanSDK/1.3.296.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-debug\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-debug\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Dev/MyProjects/Vulkan_Engine/Engine/build/third_party/SDL/Debug/SDL2d.dll C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\fmt\Debug\fmtd.lib;..\third_party\Debug\vkbootstrap.lib;..\third_party\Debug\imgui.lib;..\third_party\fastgltf\Debug\fastgltf.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\SDL\Debug\SDL2d.lib;..\third_party\fastgltf\Debug\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/Debug/engine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/Debug/engine.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-release\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/VulkanSDK/1.3.296.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-release\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-release\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Dev/MyProjects/Vulkan_Engine/Engine/build/third_party/SDL/Release/SDL2.dll C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\fmt\Release\fmt.lib;..\third_party\Release\vkbootstrap.lib;..\third_party\Release\imgui.lib;..\third_party\fastgltf\Release\fastgltf.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\SDL\Release\SDL2.lib;..\third_party\fastgltf\Release\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/Release/engine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/Release/engine.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-minsizerel\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/VulkanSDK/1.3.296.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-minsizerel\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-minsizerel\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Dev/MyProjects/Vulkan_Engine/Engine/build/third_party/SDL/MinSizeRel/SDL2.dll C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\fmt\MinSizeRel\fmt.lib;..\third_party\MinSizeRel\vkbootstrap.lib;..\third_party\MinSizeRel\imgui.lib;..\third_party\fastgltf\MinSizeRel\fastgltf.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\SDL\MinSizeRel\SDL2.lib;..\third_party\fastgltf\MinSizeRel\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/MinSizeRel/engine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/MinSizeRel/engine.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-relwithdebinfo\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/VulkanSDK/1.3.296.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLM_FORCE_DEPTH_ZERO_TO_ONE;FASTGLTF_USE_CUSTOM_SMALLVECTOR=0;FASTGLTF_ENABLE_DEPRECATED_EXT=0;FASTGLTF_DISABLE_CUSTOM_MEMORY_POOL=0;FASTGLTF_USE_64BIT_FLOAT=0;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-relwithdebinfo\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\Vulkan_Engine\Engine\src;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vma;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\glm;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fmt\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\stb_image;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\include-config-relwithdebinfo\SDL2;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\vkbootstrap;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\imgui;C:\Dev\MyProjects\Vulkan_Engine\Engine\third_party\fastgltf\include;C:\VulkanSDK\1.3.296.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Dev/MyProjects/Vulkan_Engine/Engine/build/third_party/SDL/RelWithDebInfo/SDL2.dll C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\fmt\RelWithDebInfo\fmt.lib;..\third_party\RelWithDebInfo\vkbootstrap.lib;..\third_party\RelWithDebInfo\imgui.lib;..\third_party\fastgltf\RelWithDebInfo\fastgltf.lib;C:\VulkanSDK\1.3.296.0\Lib\vulkan-1.lib;..\third_party\SDL\RelWithDebInfo\SDL2.lib;..\third_party\fastgltf\RelWithDebInfo\fastgltf_simdjson.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/RelWithDebInfo/engine.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/RelWithDebInfo/engine.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Dev/MyProjects/Vulkan_Engine/Engine/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Dev/MyProjects/Vulkan_Engine/Engine -BC:/Dev/MyProjects/Vulkan_Engine/Engine/build --check-stamp-file C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Dev/MyProjects/Vulkan_Engine/Engine/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Dev/MyProjects/Vulkan_Engine/Engine -BC:/Dev/MyProjects/Vulkan_Engine/Engine/build --check-stamp-file C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Dev/MyProjects/Vulkan_Engine/Engine/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Dev/MyProjects/Vulkan_Engine/Engine -BC:/Dev/MyProjects/Vulkan_Engine/Engine/build --check-stamp-file C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Dev/MyProjects/Vulkan_Engine/Engine/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Dev/MyProjects/Vulkan_Engine/Engine -BC:/Dev/MyProjects/Vulkan_Engine/Engine/build --check-stamp-file C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/engine.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\main.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_types.h" />
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_initializers.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_initializers.h" />
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_images.h" />
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_images.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_descriptors.h" />
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_descriptors.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_pipelines.h" />
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_pipelines.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_engine.h" />
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_engine.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_loader.h" />
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\vk_loader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\camera.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Dev/MyProjects/Vulkan_Engine/Engine/build/src/CMakeFiles/engine.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\src\camera.h" />
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\MinSizeRel\cmake_pch.hxx" />
+    <ClInclude Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\src\CMakeFiles\engine.dir\RelWithDebInfo\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\ZERO_CHECK.vcxproj">
+      <Project>{AEE44381-9F82-39AD-8248-03344E8D90DD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\SDL\SDL2.vcxproj">
+      <Project>{6E1C8159-1285-3777-A09A-FFAA9C775C93}</Project>
+      <Name>SDL2</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\fastgltf\fastgltf.vcxproj">
+      <Project>{E0805031-6EAE-3FA7-BEDC-AA71F14C3DB9}</Project>
+      <Name>fastgltf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\fastgltf\fastgltf_simdjson.vcxproj">
+      <Project>{82C6AA06-EC85-30D9-849A-1E8C88DE1FB7}</Project>
+      <Name>fastgltf_simdjson</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\fmt\fmt.vcxproj">
+      <Project>{4FB9ED45-4C94-379F-801C-AF92508CB8BD}</Project>
+      <Name>fmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\imgui.vcxproj">
+      <Project>{08DAE63E-38B5-35AE-8BAC-AFBDA5A0876D}</Project>
+      <Name>imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Dev\MyProjects\Vulkan_Engine\Engine\build\third_party\vkbootstrap.vcxproj">
+      <Project>{BB34D1B3-1A21-34CE-BD6C-71341A92E672}</Project>
+      <Name>vkbootstrap</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
