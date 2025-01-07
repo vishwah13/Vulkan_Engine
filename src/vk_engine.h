@@ -7,6 +7,7 @@
 #include <vk_initializers.h>
 #include "VkBootstrap.h"
 #include <vk_descriptors.h>
+#include <vk_loader.h>
 
 struct DeletionQueue
 {
@@ -53,39 +54,10 @@ struct ComputeEffect {
 	ComputePushConstants data;
 };
 
-struct Vertex {
-
-	glm::vec3 position;
-	float uv_x;
-	glm::vec3 normal;
-	float uv_y;
-	glm::vec4 color;
-};
-
-// holds the resources needed for a mesh
-struct GPUMeshBuffers {
-
-	AllocatedBuffer indexBuffer;
-	AllocatedBuffer vertexBuffer;
-	VkDeviceAddress vertexBufferAddress;
-};
-
-// push constants for our mesh object draws
-struct GPUDrawPushConstants {
-	glm::mat4 worldMatrix;
-	VkDeviceAddress vertexBuffer;
-};
-
 constexpr unsigned int FRAME_OVERLAP = 2;
 
 class VulkanEngine {
 public:
-
-	VmaAllocator _allocator;
-
-	//draw resources
-	AllocatedImage _drawImage;
-	VkExtent2D _drawExtent;
 
 	bool _isInitialized{ false };
 	int _frameNumber {0};
@@ -129,16 +101,26 @@ public:
 	VkCommandBuffer _immCommandBuffer;
 	VkCommandPool _immCommandPool;
 
+	VmaAllocator _allocator;
+
+	//draw resources
+	AllocatedImage _drawImage;
+	VkExtent2D _drawExtent;
+	//for depth testing
+	AllocatedImage _depthImage;
+
 	std::vector<ComputeEffect> backgroundEffects;
 	int currentBackgroundEffect{ 0 };
 
-	VkPipelineLayout _trianglePipelineLayout;
-	VkPipeline _trianglePipeline;
+	/*VkPipelineLayout _trianglePipelineLayout;
+	VkPipeline _trianglePipeline;*/
 
 	VkPipelineLayout _meshPipelineLayout;
 	VkPipeline _meshPipeline;
 
-	GPUMeshBuffers rectangle;
+	//GPUMeshBuffers rectangle;
+
+	std::vector<std::shared_ptr<MeshAsset>> testMeshes;
 
 
 
@@ -160,7 +142,7 @@ public:
 
 	void draw_imgui(VkCommandBuffer cmd, VkImageView targetImageView);
 
-	void init_triangle_pipeline();
+	//void init_triangle_pipeline();
 
 	AllocatedBuffer create_buffer(size_t allocSize, VkBufferUsageFlags usage, VmaMemoryUsage memoryUsage);
 	void destroy_buffer(const AllocatedBuffer& buffer);

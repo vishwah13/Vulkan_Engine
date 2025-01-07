@@ -15,7 +15,7 @@
 3654	4076	7577904938239825	third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapijoystick.c.obj	22df30a9a6d7ed60
 74	231	7577904902799832	C:/Dev/MyProjects/Vulkan_Engine/Engine/out/build/x64-Debug/third_party/SDL/include/SDL2/SDL_clipboard.h	dabd73c84f5a87bf
 174	321	7577904903809827	C:/Dev/MyProjects/Vulkan_Engine/Engine/out/build/x64-Debug/third_party/SDL/include/SDL2/SDL_log.h	c45fcad882b749cc
-87	1390	7578057147522831	src/CMakeFiles/engine.dir/vk_engine.cpp.obj	f61a2dd46dbbb482
+86	1339	7579529189414769	src/CMakeFiles/engine.dir/vk_engine.cpp.obj	f61a2dd46dbbb482
 65	220	7577904902739832	C:/Dev/MyProjects/Vulkan_Engine/Engine/out/build/x64-Debug/third_party/SDL/include/SDL2/SDL_bits.h	99d33bc74c1ad19e
 141	294	7577904903439831	C:/Dev/MyProjects/Vulkan_Engine/Engine/out/build/x64-Debug/third_party/SDL/include/SDL2/SDL_hints.h	1fe459a81fdbaec3
 69	226	7577904902789836	third_party/SDL/include/SDL2/SDL_blendmode.h	468acdb27a20f686
@@ -235,7 +235,7 @@
 504	986	7577904906739833	third_party/SDL/CMakeFiles/SDL2.dir/src/cpuinfo/SDL_cpuinfo.c.obj	9a1d2438befb51cc
 1501	1856	7577904916709854	third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_render_sw.c.obj	a283f87db2c858a
 486	990	7577904906559832	third_party/SDL/CMakeFiles/SDL2.dir/src/atomic/SDL_spinlock.c.obj	bb3e41dbb656feda
-458	1005	7577904906279835	third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.obj	b15c6b04b58c088a
+90	575	7579398149267722	third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.obj	b15c6b04b58c088a
 510	1112	7577904906799828	third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_clipboardevents.c.obj	828952484ad732a4
 521	1120	7577904906899831	third_party/SDL/CMakeFiles/SDL2.dir/src/events/SDL_gesture.c.obj	e5f72041c5cc258e
 842	1124	7577904910119831	third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/controller_type.c.obj	5c9d26e61040398a
@@ -251,7 +251,7 @@
 4897	5071	7577904950669829	src/CMakeFiles/engine.dir/vk_initializers.cpp.obj	97ec3df81e331388
 1005	1319	7577904911749823	third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_rem_pio2.c.obj	e615c23ea51c87a3
 3427	3822	7577904935959867	third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/hidapi/SDL_hidapi_shield.c.obj	7feb2c30301f5e96
-77	656	7578057147412815	src/CMakeFiles/engine.dir/main.cpp.obj	a915334ffec91773
+79	571	7579529189344759	src/CMakeFiles/engine.dir/main.cpp.obj	a915334ffec91773
 1101	1326	7577904912709841	third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_sqrt.c.obj	7c1c1a331d979160
 1446	1886	7577904916159881	third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_blendline.c.obj	2fc0d93f6477302a
 997	1332	7577904911659828	third_party/SDL/CMakeFiles/SDL2.dir/src/libm/e_pow.c.obj	fe64798a40bd6e23
@@ -281,7 +281,7 @@
 1352	2453	7577904915209827	third_party/SDL/CMakeFiles/SDL2.dir/src/render/direct3d11/SDL_render_d3d11.c.obj	c6b4a96ff717092a
 1390	1518	7577904915599834	third_party/SDL/CMakeFiles/SDL2.dir/src/render/ps2/SDL_render_ps2.c.obj	e2af4e07c16ba278
 81	622	7578057147452821	src/CMakeFiles/engine.dir/vk_descriptors.cpp.obj	380f19ddd600e8e
-4718	5356	7577904955069910	third_party/SDL/SDL2d.dll	71869d4dabb285b2
+575	733	7579398154117121	third_party/SDL/SDL2d.dll	71869d4dabb285b2
 1397	1532	7577904915669836	third_party/SDL/CMakeFiles/SDL2.dir/src/render/psp/SDL_render_psp.c.obj	2ea76c4a65ab2769
 1460	1819	7577904916289833	third_party/SDL/CMakeFiles/SDL2.dir/src/render/software/SDL_drawpoint.c.obj	e2ef0432d872d892
 836	1832	7577904910059850	third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/SDL_joystick.c.obj	41c162cb584cc89a
@@ -373,20 +373,6 @@
 3670	4717	7577904938399832	third_party/SDL/CMakeFiles/SDL2.dir/src/joystick/windows/SDL_windows_gaming_input.c.obj	87ff2a9e1a0978aa
 4914	4956	7577904950839828	src/CMakeFiles/engine.dir/vk_loader.cpp.obj	bb4f291a53783c6c
 4901	5069	7577904950699828	src/CMakeFiles/engine.dir/vk_images.cpp.obj	75c55fbdce5bce15
-84	690	7578057147492822	src/CMakeFiles/engine.dir/vk_pipelines.cpp.obj	3f02753cd1187d21
-4718	5356	7577904955069910	third_party/SDL/SDL2d.lib	71869d4dabb285b2
-1390	1685	7578057160548869	C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/engine.exe	d1aa6f8835844580
-90	575	7579398149267722	third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.obj	b15c6b04b58c088a
-95	713	7579398149307769	src/CMakeFiles/engine.dir/main.cpp.obj	a915334ffec91773
-575	733	7579398154117121	third_party/SDL/SDL2d.dll	71869d4dabb285b2
-575	733	7579398154117121	third_party/SDL/SDL2d.lib	71869d4dabb285b2
-98	742	7579398149347734	src/CMakeFiles/engine.dir/vk_pipelines.cpp.obj	3f02753cd1187d21
-100	1480	7579398149367728	src/CMakeFiles/engine.dir/vk_engine.cpp.obj	f61a2dd46dbbb482
-1480	1754	7579398163166567	C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/engine.exe	d1aa6f8835844580
-87	586	7579444864464951	src/CMakeFiles/engine.dir/main.cpp.obj	a915334ffec91773
-90	1350	7579444864494885	src/CMakeFiles/engine.dir/vk_engine.cpp.obj	f61a2dd46dbbb482
-1350	1554	7579444877090342	C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/engine.exe	d1aa6f8835844580
-79	571	7579529189344759	src/CMakeFiles/engine.dir/main.cpp.obj	a915334ffec91773
 82	625	7579529189384824	src/CMakeFiles/engine.dir/vk_pipelines.cpp.obj	3f02753cd1187d21
-86	1339	7579529189414769	src/CMakeFiles/engine.dir/vk_engine.cpp.obj	f61a2dd46dbbb482
+575	733	7579398154117121	third_party/SDL/SDL2d.lib	71869d4dabb285b2
 1339	1543	7579529201940897	C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/engine.exe	d1aa6f8835844580
