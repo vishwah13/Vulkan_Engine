@@ -376,3 +376,15 @@
 82	625	7579529189384824	src/CMakeFiles/engine.dir/vk_pipelines.cpp.obj	3f02753cd1187d21
 575	733	7579398154117121	third_party/SDL/SDL2d.lib	71869d4dabb285b2
 1339	1543	7579529201940897	C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/engine.exe	d1aa6f8835844580
+90	576	7580233511687131	src/CMakeFiles/engine.dir/vk_images.cpp.obj	75c55fbdce5bce15
+88	591	7580233511667136	src/CMakeFiles/engine.dir/vk_initializers.cpp.obj	97ec3df81e331388
+80	626	7580233511597098	third_party/SDL/CMakeFiles/SDL2.dir/src/SDL.c.obj	b15c6b04b58c088a
+93	631	7580233511717135	src/CMakeFiles/engine.dir/vk_descriptors.cpp.obj	380f19ddd600e8e
+102	632	7580233511807133	src/CMakeFiles/engine.dir/camera.cpp.obj	88ab5fcedf163dd5
+95	727	7580233511737133	src/CMakeFiles/engine.dir/vk_pipelines.cpp.obj	3f02753cd1187d21
+627	783	7580233517060351	third_party/SDL/SDL2d.dll	71869d4dabb285b2
+627	783	7580233517060351	third_party/SDL/SDL2d.lib	71869d4dabb285b2
+84	1240	7580233511637188	src/CMakeFiles/engine.dir/main.cpp.obj	a915334ffec91773
+97	1635	7580233511757124	src/CMakeFiles/engine.dir/vk_engine.cpp.obj	f61a2dd46dbbb482
+99	1758	7580233511787133	src/CMakeFiles/engine.dir/vk_loader.cpp.obj	bb4f291a53783c6c
+1758	2070	7580233528371197	C:/Dev/MyProjects/Vulkan_Engine/Engine/bin/engine.exe	d1aa6f8835844580
