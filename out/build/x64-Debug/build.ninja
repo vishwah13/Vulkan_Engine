@@ -44,7 +44,7 @@ cmake_ninja_workdir = C$:\Dev\MyProjects\Vulkan_Engine\Engine\out\build\x64-Debu
 #############################################
 # Utility command for Shaders
 
-build Shaders: phony CMakeFiles\Shaders C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.frag.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle_mesh.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient_color.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\sky.comp.spv
+build Shaders: phony CMakeFiles\Shaders C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.frag.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle_mesh.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient_color.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\sky.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\tex_image.frag.spv
 
 
 #############################################
@@ -103,7 +103,7 @@ build install\local: phony CMakeFiles\install\local.util
 #############################################
 # Phony custom command for CMakeFiles\Shaders
 
-build CMakeFiles\Shaders | ${cmake_ninja_workdir}CMakeFiles\Shaders: phony C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.frag.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle_mesh.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient_color.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\sky.comp.spv
+build CMakeFiles\Shaders | ${cmake_ninja_workdir}CMakeFiles\Shaders: phony C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.frag.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\colored_triangle_mesh.vert.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient_color.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\sky.comp.spv C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\tex_image.frag.spv
 
 
 #############################################
@@ -157,6 +157,15 @@ build C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\gradient_color.comp.spv: C
 build C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\sky.comp.spv: CUSTOM_COMMAND C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\sky.comp
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Dev\MyProjects\Vulkan_Engine\Engine\out\build\x64-Debug && C:\VulkanSDK\1.3.296.0\Bin\glslangValidator.exe -V C:/Dev/MyProjects/Vulkan_Engine/Engine/shaders/sky.comp -o C:/Dev/MyProjects/Vulkan_Engine/Engine/shaders/sky.comp.spv"
   DESC = Generating C:/Dev/MyProjects/Vulkan_Engine/Engine/shaders/sky.comp.spv
+  restat = 1
+
+
+#############################################
+# Custom command for C:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\tex_image.frag.spv
+
+build C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\tex_image.frag.spv: CUSTOM_COMMAND C$:\Dev\MyProjects\Vulkan_Engine\Engine\shaders\tex_image.frag
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Dev\MyProjects\Vulkan_Engine\Engine\out\build\x64-Debug && C:\VulkanSDK\1.3.296.0\Bin\glslangValidator.exe -V C:/Dev/MyProjects/Vulkan_Engine/Engine/shaders/tex_image.frag -o C:/Dev/MyProjects/Vulkan_Engine/Engine/shaders/tex_image.frag.spv"
+  DESC = Generating C:/Dev/MyProjects/Vulkan_Engine/Engine/shaders/tex_image.frag.spv
   restat = 1
 
 # =============================================================================
