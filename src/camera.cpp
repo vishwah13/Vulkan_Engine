@@ -2,10 +2,10 @@
 #include <glm/gtx/transform.hpp>
 #include <glm/gtx/quaternion.hpp>
 
-void Camera::update()
+void Camera::update(float dt)
 {
     glm::mat4 cameraRotation = getRotationMatrix();
-    position += glm::vec3(cameraRotation * glm::vec4(velocity * 0.5f, 0.f));
+    position += glm::vec3(cameraRotation * glm::vec4(velocity * speed * dt, 0.f));
 }
 
 void Camera::processSDLEvent(SDL_Event& e)
@@ -15,6 +15,8 @@ void Camera::processSDLEvent(SDL_Event& e)
         if (e.key.keysym.sym == SDLK_s) { velocity.z = 1; }
         if (e.key.keysym.sym == SDLK_a) { velocity.x = -1; }
         if (e.key.keysym.sym == SDLK_d) { velocity.x = 1; }
+        if (e.key.keysym.sym == SDLK_e) { velocity.y = 1; }
+        if (e.key.keysym.sym == SDLK_q) { velocity.y = -1; }
     }
 
     if (e.type == SDL_KEYUP) {
@@ -22,11 +24,36 @@ void Camera::processSDLEvent(SDL_Event& e)
         if (e.key.keysym.sym == SDLK_s) { velocity.z = 0; }
         if (e.key.keysym.sym == SDLK_a) { velocity.x = 0; }
         if (e.key.keysym.sym == SDLK_d) { velocity.x = 0; }
+        if (e.key.keysym.sym == SDLK_e) { velocity.y = 0; }
+        if (e.key.keysym.sym == SDLK_q) { velocity.y = 0; }
     }
 
-    if (e.type == SDL_MOUSEMOTION) {
+    // Track right mouse button press/release
+    if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_RIGHT) {
+        rightMouseButtonDown = true;
+        SDL_SetRelativeMouseMode(SDL_TRUE); // Enable relative mouse mode
+    }
+    if (e.type == SDL_MOUSEBUTTONUP && e.button.button == SDL_BUTTON_RIGHT) {
+        rightMouseButtonDown = false;
+        SDL_SetRelativeMouseMode(SDL_FALSE); // Disable relative mouse mode
+    }
+
+    if (e.type == SDL_MOUSEMOTION && rightMouseButtonDown) {
         yaw += (float)e.motion.xrel / 200.f;
         pitch -= (float)e.motion.yrel / 200.f;
+    }
+
+    // Mouse wheel for zoom or speed control
+    if (e.type == SDL_MOUSEWHEEL) {
+        if (e.wheel.y > 0) {  // Wheel scrolled up
+            speed += 1.0f;  // Increase camera speed
+        }
+        else if (e.wheel.y < 0) {  // Wheel scrolled down
+            speed -= 1.0f;  // Decrease camera speed
+        }
+
+        // Clamp speed to a reasonable range
+        speed = glm::clamp(speed, 10.0f, 50.0f);
     }
 }
 

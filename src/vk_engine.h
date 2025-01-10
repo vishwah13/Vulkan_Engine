@@ -215,7 +215,11 @@ public:
 
 	Camera mainCamera;
 
-	void update_scene();
+	std::chrono::high_resolution_clock::time_point currentFrameTime;
+	std::chrono::high_resolution_clock::time_point previousFrameTime;
+	float deltaTime = 0.0f;
+
+	void update_scene(float dt);
 
 
 
@@ -226,7 +230,7 @@ public:
 	void cleanup();
 
 	//draw loop
-	void draw();
+	void draw(float dt);
 	void draw_background(VkCommandBuffer cmd);
 	void draw_geometry(VkCommandBuffer cmd);
 

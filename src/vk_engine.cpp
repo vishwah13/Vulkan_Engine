@@ -6,6 +6,7 @@
 
 #include <SDL.h>
 #include <SDL_vulkan.h>
+#include <SDL_stdinc.h>
 
 #include <vk_initializers.h>
 #include <vk_types.h>
@@ -65,9 +66,11 @@ bool is_visible(const RenderObject& obj, const glm::mat4& viewproj) {
     }
 }
 
-void VulkanEngine::update_scene()
+void VulkanEngine::update_scene(float dt)
 {
-    mainCamera.update();
+    auto start = std::chrono::system_clock::now();
+
+    mainCamera.update(dt);
 
     glm::mat4 view = mainCamera.getViewMatrix();
 
@@ -93,6 +96,12 @@ void VulkanEngine::update_scene()
 
     //loadedNodes["Suzanne"]->Draw(glm::mat4{ 1.f }, mainDrawContext);
     loadedScenes["structure"]->Draw(glm::mat4{ 1.f }, mainDrawContext);
+
+    auto end = std::chrono::system_clock::now();
+
+    //convert to microseconds (integer), and then come back to miliseconds
+    auto elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    stats.scene_update_time = elapsed.count() / 1000.f;
 
    /* for (int x = -3; x < 3; x++) {
 
@@ -122,6 +131,10 @@ void VulkanEngine::init()
         _windowExtent.height,
         window_flags);
 
+    
+   /* SDL_SetWindowGrab(_window, SDL_TRUE);
+    SDL_ShowCursor(SDL_ENABLE);*/
+
     init_vulkan();
 
     init_swapchain();
@@ -142,6 +155,7 @@ void VulkanEngine::init()
 
     mainCamera.velocity = glm::vec3(0.f);
     mainCamera.position = glm::vec3(30.f, -00.f, -085.f);
+    //mainCamera.position = glm::vec3(1.f, 1.f, 1.f);
 
     mainCamera.pitch = 0;
     mainCamera.yaw = 0;
@@ -643,9 +657,9 @@ void VulkanEngine::cleanup()
     loadedEngine = nullptr;
 }
 
-void VulkanEngine::draw()
+void VulkanEngine::draw(float dt)
 {
-    update_scene();
+    update_scene(dt);
 
     // wait until the gpu has finished rendering the last frame. Timeout of 1
     // second
@@ -896,11 +910,15 @@ void VulkanEngine::run()
 {
     SDL_Event e;
     bool bQuit = false;
-
     // main loop
     while (!bQuit) {
         //begin clock
         auto start = std::chrono::system_clock::now();
+        //calculating deltaTime
+        currentFrameTime = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<float> elapsedDeltaTime = currentFrameTime - previousFrameTime;
+        deltaTime = elapsedDeltaTime.count(); // Delta time in seconds
+        previousFrameTime = currentFrameTime;
         // Handle events on queue
         while (SDL_PollEvent(&e) != 0) {
             // close the window when user alt-f4s or clicks the X button
@@ -940,6 +958,7 @@ void VulkanEngine::run()
         ImGui::Begin("Stats");
 
         ImGui::Text("frametime %f ms", stats.frametime);
+        ImGui::Text("DeltaTime %f S", deltaTime);
         ImGui::Text("draw time %f ms", stats.mesh_draw_time);
         ImGui::Text("update time %f ms", stats.scene_update_time);
         ImGui::Text("triangles %i", stats.triangle_count);
@@ -962,7 +981,7 @@ void VulkanEngine::run()
 
         ImGui::Render();
 
-        draw();
+        draw(deltaTime);
 
         //get clock again, compare with start clock
         auto end = std::chrono::system_clock::now();
@@ -1216,6 +1235,8 @@ void VulkanEngine::init_mesh_pipeline()
 
 void VulkanEngine::init_default_data()
 {
+    previousFrameTime = std::chrono::high_resolution_clock::now();
+    deltaTime = 0.0f;
     //3 default textures, white, grey, black. 1 pixel each
     uint32_t white = glm::packUnorm4x8(glm::vec4(1, 1, 1, 1));
     _whiteImage = create_image((void*)&white, VkExtent3D{ 1, 1, 1 }, VK_FORMAT_R8G8B8A8_UNORM,
