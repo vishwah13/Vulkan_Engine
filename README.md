@@ -2,8 +2,8 @@
 A graphics engine using Vulkan API and C++
 
 ## Build dependencies
-*CMake 3.8
-*Vulkan SDk
+* CMake 3.8
+* Vulkan SDk
 
 ## Current progress
 
