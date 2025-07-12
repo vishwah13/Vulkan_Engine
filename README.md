@@ -16,4 +16,3 @@ A graphics engine using Vulkan API and C++
 * Frustum culling
 * Scene Graph
 * Compute Shader
-* Bindless textures and samplers
