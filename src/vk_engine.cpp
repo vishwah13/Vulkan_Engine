@@ -921,8 +921,8 @@ void VulkanEngine::run()
         previousFrameTime = currentFrameTime;
         // Handle events on queue
         while (SDL_PollEvent(&e) != 0) {
-            // close the window when user alt-f4s or clicks the X button
-            if (e.type == SDL_QUIT)
+            // close the window when user alt-f4s or clicks the X button or press Esc
+            if (e.type == SDL_QUIT || e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_ESCAPE)
                 bQuit = true;
 
             if (e.type == SDL_WINDOWEVENT) {
@@ -1304,7 +1304,7 @@ void VulkanEngine::init_default_data()
     materialResources.dataBuffer = materialConstants.buffer;
     materialResources.dataBufferOffset = 0;
 
-    defaultData = metalRoughMaterial.write_material(_device, MaterialPass::MainColor, materialResources, globalDescriptorAllocator);
+    defaultData = metalRoughMaterial.write_material(_device, MaterialPass::MainColor, materialResources, get_current_frame()._frameDescriptors);
 
     //testMeshes = loadGltfMeshes(this, "..\\..\\assets\\basicmesh.glb").value();
 
